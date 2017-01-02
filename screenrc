@@ -1,0 +1,19 @@
+vbell off                                                                                               
+escape ^za 
+altscreen on
+defscrollback 1000
+hardstatus             alwayslastline                                                                       
+hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+#
+startup_message off 
+
+bind ',' prev
+bind '.' next
+screen -t root 0 sudo -i
+screen -t vim 1 bash
+screen -t run 2 bash
+screen -t dev 3 bash
+screen -t python 4 bash
+select 0
+
